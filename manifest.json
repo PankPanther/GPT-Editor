@@ -1,0 +1,41 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Window manipulator",
+    "default_popup": "window.html",
+    "default_icon": {
+      "19": "icons/w19.png",
+      "38": "icons/w38.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/w96.png"
+  },
+  "homepage_url": "https://github.com/PankPanther/GPT-Editor/",
+  "manifest_version": 2,
+  "name": "GPT Editor",
+  "version": "1.0.1",
+  "description": "Effortlessly proofread, edit, and monitor changes to your content using ChatGPT.",
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "push.js"
+      ],
+      "css": [
+        "css/push.css"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{aswal@pankaj123}"
+    }
+  }
+}
